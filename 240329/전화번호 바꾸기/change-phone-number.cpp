@@ -8,6 +8,6 @@ int main() {
     cin >> front;
     cin.get();
     cin >> rear;
-    cout <<zero << "-" << rear << "-" << front;
+    cout <<"010" << "-" << rear << "-" << front;
     return 0;
 }
