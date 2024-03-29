@@ -5,6 +5,7 @@ int main() {
     int a = 0;
     cout << fixed;
     cout.precision(2);
+    cin >> a ;
     cout << a + 1.5 ;
     return 0;
 }
