@@ -6,7 +6,7 @@ int main() {
     cin >> water;
 
     if(water < 0){
-        coout << "ice";
+        cout << "ice";
     }else if(water>=100){
         cout << "vapor" ;
     }
