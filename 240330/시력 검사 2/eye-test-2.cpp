@@ -9,7 +9,7 @@ int main() {
         cout << "High";
     }
     else if (visi >=0.5){
-        cout << "Middel";
+        cout << "Middle";
     }else{
         cout << "Low";
     }
