@@ -5,6 +5,6 @@ int main() {
     int a;
     cin >> a;
 
-    cout << ((a<10)||(a>20)) ? "yes":"no";
+    cout << (((a<10)||(a>20)) ? "yes":"no");
     return 0;
 }
