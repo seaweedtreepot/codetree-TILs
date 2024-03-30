@@ -19,7 +19,7 @@ int main() {
     }
     else {
         if(b < c){
-            cout << c;
+            cout << b;
         }
         else {
             if(c>a){
