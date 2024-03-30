@@ -26,12 +26,7 @@ int main() {
 
     if(n>7){
         if(n%2==0){
-            if(n==2){
-                cout << 28;
-            }
-            else{
                 cout << 31;
-            }
         }
         else{
             cout << 30;
@@ -39,6 +34,9 @@ int main() {
     }
     else{
         if(n%2 == 0){
+            if(n==2){
+                cout << 28;
+            }else
             cout << 30;
         }
         else{
