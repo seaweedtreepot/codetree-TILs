@@ -8,7 +8,7 @@ int main() {
         if(n==2){
             cout << 28;
         }
-        else if (n==8){
+        else if (n==8 || n==10){
             cout << 31;
         }else{
             cout << 30;
