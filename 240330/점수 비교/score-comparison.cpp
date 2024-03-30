@@ -6,6 +6,6 @@ int main() {
     cin >> a_math >> a_eng >> b_math >> b_eng;
 
 
-    cout << (a_math > b_math) && (a_eng>b_eng)? 1 ? 0;
+    cout << (a_math > b_math) && (a_eng>b_eng)? 1 : 0;
     return 0;
 }
