@@ -9,9 +9,9 @@ int main() {
         if(num%3==0 && num%5==0){
             mul_t++; mul_f++;
         }
-        else if(num%3){
+        else if(num%3==0){
             mul_t++;
-        }else if(num%5){
+        }else if(num%5==0){
             mul_f++;
         }
     }
