@@ -6,8 +6,9 @@ int main() {
     cin >> b >> a;
     while(b>=a){
         if(b%2==0){
-            cout << b-- << " ";
+            cout << b << " ";
         }
+        b--;
     }
     return 0;
 }
