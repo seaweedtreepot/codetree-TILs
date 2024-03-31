@@ -9,9 +9,9 @@ int main() {
         if(i%3==0){
             cout << 0 <<" ";
         }
-        else if (i%10%3 == 0){
+        else if ((i%10%3==0)&&(i%10!=0)){
             cout << 0 << " ";
-        }else if(i/10!=0 && i/10%3==0){
+        }else if(((i/10)%3==0)&&(i/10 != 0)){
             cout << 0 << " ";
         }else{
             cout << i << " ";
