@@ -14,7 +14,8 @@ int main() {
         }
         
     }
-
+    cout.precision(1);
+    cout << fixed;
     cout << sum_val << " " <<  (double)sum_val/cnt;
     return 0;
 }
