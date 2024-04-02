@@ -11,6 +11,6 @@ int main() {
         }
     }
 
-    cout << (flag?:"YES"?"NO");
+    cout << (flag?"YES":"NO");
     return 0;
 }
