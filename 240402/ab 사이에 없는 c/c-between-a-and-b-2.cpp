@@ -6,7 +6,7 @@ int main() {
     cin >> a>> b>> c;
     bool flag = true;
     for(int i = a; i < b +1; i++){
-        if(c%i == 0){
+        if(i%c == 0){
             flag = false;
             break;
         }
