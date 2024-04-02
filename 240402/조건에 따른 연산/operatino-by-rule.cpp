@@ -17,6 +17,7 @@ int main() {
         else{
             n = n*2 +2;
         }
+        cnt++;
     }
 
     cout << cnt;
