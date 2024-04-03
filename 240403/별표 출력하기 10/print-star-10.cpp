@@ -19,22 +19,30 @@ int main() {
             cout << endl;
         }
     }
-    
-    
-    
+
+    if(n%2==1){
+        cnt_o--;
+        int temp = cnt_o;
+        cnt_o = cnt_e;
+        cnt_e = temp;
+    } 
+   
+   
     for(int i = 0; i < n; i++){
-        if(i%2==1){
-            for(int j = 0; j < cnt_e; j++){
+        if(i%2==0){
+            for(int j = 0; j < cnt_o; j++){
                 cout << "* ";
             }
+            cnt_e++;
             cout << endl;
-            cnt_e--;
+          
         }else{
-            for(int j =0; j<cnt_o;j++){
+            for(int j =0; j<cnt_e;j++){
                 cout << "* ";
             }
+            cnt_o--;
             cout << endl;
-            cnt_o++;
+            
         }
     }
     return 0;
