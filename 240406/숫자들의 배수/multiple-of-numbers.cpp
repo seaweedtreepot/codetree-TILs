@@ -5,6 +5,8 @@ int main() {
     int arr[10];
     cin >> arr[0]; cout << arr[0] << " ";
     int cnt =0;
+    if(arr[0]==5)
+        cnt++;
     for(int i = 1; i < 10; i++){
         arr[i] = arr[0]*(i+1);
         cout << arr[i] << " ";
