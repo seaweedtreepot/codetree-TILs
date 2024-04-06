@@ -11,7 +11,7 @@ int main() {
 
     int arr_e[50] ={-1};
     int cnt = 0;
-    for(int i = 0; i < 50; i++){
+    for(int i = 0; i < n; i++){
         if(arr[i]%2==0 && arr[i]!=0){
             arr_e[cnt++] = arr[i];
         }
