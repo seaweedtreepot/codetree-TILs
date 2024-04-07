@@ -5,10 +5,10 @@ int main() {
     int n;
     cin >> n;
     int arr[10]={};
-
+    int a;
     for(int i = 0; i < n; i++){
-        cin >> n;
-        arr[n]++;
+        cin >> a;
+        arr[a]++;
     }
 
     for(int i = 1; i < 10; i++){
