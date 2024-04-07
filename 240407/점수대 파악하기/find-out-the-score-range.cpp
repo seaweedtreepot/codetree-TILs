@@ -11,7 +11,7 @@ int main() {
         arr[a/10]++;
     }
 
-    for(int i = 10; i >0;i-- ){
+    for(int i = 10; i > 0;i-- ){
         cout << i * 10 << " - " << arr[i]<<endl;;
     }
     return 0;
