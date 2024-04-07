@@ -8,6 +8,9 @@ int main() {
 
     for(int i = 0; i < 100; i++){
         cin >> a;
+        if(a==0){
+            break;
+        }
         arr[a/10]++;
     }
 
