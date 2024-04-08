@@ -11,7 +11,7 @@ int main() {
    int min_val = arr[0];
    int snd_min_val = arr[1];
    for(int i = 0; i < n; i++){
-        if(min_val <= arr[i]){
+        if(min_val < arr[i]){
             snd_min_val = min_val;
             min_val = arr[i];
         }else if(snd_min_val < arr[i]){
