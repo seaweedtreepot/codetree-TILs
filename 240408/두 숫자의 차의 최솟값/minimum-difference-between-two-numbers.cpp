@@ -6,6 +6,9 @@ int main() {
     int n, arr[10];
     cin >> n;
     int min = INT_MAX;
+    for(int i = 0; i < n; i++){
+        cin >> arr[i];
+    }
     for(int i = 0; i < n ; i++){
         for(int j = i+1; j < n;j++){
             int compare ;
