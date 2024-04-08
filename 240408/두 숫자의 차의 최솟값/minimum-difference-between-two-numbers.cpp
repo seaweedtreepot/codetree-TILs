@@ -7,7 +7,7 @@ int main() {
     cin >> n;
     int min = INT_MAX;
     for(int i = 0; i < n ; i++){
-        for(int j = i+1; j < n;i++){
+        for(int j = i+1; j < n;j++){
             int compare ;
             if(arr[i]- arr[j] < 0){
                 compare = -(arr[i]-arr[j]);
