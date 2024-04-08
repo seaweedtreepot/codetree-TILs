@@ -12,13 +12,14 @@ int main() {
         cin >> a;
         if(arr[a]==-1){
             arr[a] = 1;
+            //cout << "초기화 완료" << endl;
         }else{
             arr[a]++;
         }
     }
 
     int max = -1;
-    for(int i = n; i > 0; i--){
+    for(int i = 1000; i > 0; i--){
         if(arr[i]==1){
             if(i > max){
                 max = i;
