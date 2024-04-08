@@ -8,10 +8,12 @@ int main() {
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     } 
-   int min_val = arr[0];
-   int snd_min_val = arr[1];
+
+
+   int min_val = INT_MIN;
+   int snd_min_val = INT_MIN;
    for(int i = 0; i < n; i++){
-        if(min_val < arr[i]){
+        if(min_val <= arr[i]){
             snd_min_val = min_val;
             min_val = arr[i];
         }else if(snd_min_val < arr[i]){
