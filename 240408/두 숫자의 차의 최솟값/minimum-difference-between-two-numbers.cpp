@@ -18,7 +18,7 @@ int main() {
                 compare = arr[i]-arr[j];
             }
 
-            if(compare < min && compare != 0){
+            if(compare < min){
                 min = compare;
             }
         }
