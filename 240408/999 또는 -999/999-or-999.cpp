@@ -13,7 +13,8 @@ int main() {
         }
         if(arr[cnt-1]>max_val){
             max_val = arr[cnt-1];
-        }else if(arr[cnt-1]<min_val){
+        }
+        if(arr[cnt-1]<min_val){
             min_val = arr[cnt-1];
         }
     }
