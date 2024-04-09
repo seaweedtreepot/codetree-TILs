@@ -7,7 +7,7 @@ int main() {
     int arr[10][10];
     int cnt =1;
     for(int j = n-1; j > -1; j--){
-        if(j%2==0){
+        if(n%2 == j%2){
             for(int i = 0; i < n; i++){
                 arr[i][j] = cnt++;
             }
