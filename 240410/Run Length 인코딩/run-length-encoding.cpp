@@ -12,16 +12,7 @@ int main() {
             cnt++;
         }else{
             B += A[i];
-           if(cnt>9){
-            while(cnt!=0){
-                B+=cnt;
-                cnt/=10;
-                //cout << B.length() << endl;
-            }
-           }
-           else{
-                B+=cnt;
-            }
+            B += to_string(cnt);
             cnt=1;
 
         }
