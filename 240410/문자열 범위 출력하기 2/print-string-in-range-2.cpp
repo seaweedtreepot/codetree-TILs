@@ -8,8 +8,8 @@ int main() {
     cin >> str;
     cin >> n;
 
-
-    if(str.length()<n){
+   // cout << str.length() ;
+    if(str.length()<=n){
         for(int i = str.length()-1; i >=0; i--){
             cout << str[i];
         } 
