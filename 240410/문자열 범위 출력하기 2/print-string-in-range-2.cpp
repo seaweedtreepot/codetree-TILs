@@ -15,8 +15,6 @@ int main() {
         cout << str[i];
     }
     }
-    for(int i = str.length()-1; i >=str.length()-n; i--){
-        cout << str[i];
-    }
+    
     return 0;
 }
