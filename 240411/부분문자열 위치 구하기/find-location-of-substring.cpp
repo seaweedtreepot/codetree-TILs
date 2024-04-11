@@ -11,6 +11,7 @@ int main() {
         //cout << str.substr(i,ob_str.length()) << endl;
         if(str.substr(i,ob_str.length())==ob_str){
             strt_inx = i;
+            break;
         }
     }
 
