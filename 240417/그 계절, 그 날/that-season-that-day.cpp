@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 bool IsThisYun(int y){
     if(y%4==0){
         if(y%100==0){
@@ -17,7 +18,7 @@ bool IsThisYun(int y){
 }
 
 bool IsThisReal(int y, int m, int d){
-    if(m>=7){
+    if(m>7){
         if(m%2==0){
             if(d>31){
                 return false;
