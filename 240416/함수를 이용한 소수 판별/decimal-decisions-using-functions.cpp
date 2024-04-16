@@ -2,6 +2,9 @@
 using namespace std;
 
 bool isPrime(int i){
+    if(i==1){
+        return false;
+    }
     for(int j = 2; j < i; j++){
         if(i%j==0){
             return false;
@@ -12,6 +15,7 @@ bool isPrime(int i){
 
 int SunOfPrime(int a, int b){
     int sum =0;
+
     for(int i = a; i <= b; i++){
         if(isPrime(i)){
             sum += i;
