@@ -6,11 +6,11 @@ cout << a << " + " << c << " = " << a+c << endl;
 }
 
 void Minus(int a, int c){
-    cout << a << " - " << c << " = " << a/c << endl;
+    cout << a << " - " << c << " = " << a-c << endl;
 }
 
 void Multiply(int a, int c){
-    cout << a << " * " << c << " = " << a/c << endl;
+    cout << a << " * " << c << " = " << a*c << endl;
 }
 
 void Divide(int a, int c){
