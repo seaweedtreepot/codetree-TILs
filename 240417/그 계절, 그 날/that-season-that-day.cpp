@@ -11,6 +11,8 @@ bool IsThisYun(int y){
         }else{
             return true;
         }
+    }else{
+        return false;
     }
 }
 
