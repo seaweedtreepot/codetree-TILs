@@ -14,6 +14,9 @@ bool IsPartOf(int* a,int a_length, int* b,int b_length){
                 }
             }
         }
+        if(flag){
+            break;
+        }
     }
     return flag;
 }
