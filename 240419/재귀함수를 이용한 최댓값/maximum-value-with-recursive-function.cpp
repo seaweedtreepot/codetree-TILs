@@ -5,7 +5,8 @@ int Max(int N, int arr[]){
   if(N==1){
     return arr[0];
   }
-    return (Max(N-1,arr)>arr[N-1]?Max(N-1,arr):arr[N-1]);
+  int temp = Max(N-1,arr);
+    return (temp>arr[N-1]?temp:arr[N-1]);
 }
 int main() {
     // 여기에 코드를 작성해주세요.
