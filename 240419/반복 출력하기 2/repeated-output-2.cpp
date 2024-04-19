@@ -6,7 +6,7 @@ void PrintHello(int N){
         return;
     }
     PrintHello(N-1);
-    cout << "HelloWorld"<<endl
+    cout << "HelloWorld"<<endl;
 }
 int main() {
     // 여기에 코드를 작성해주세요.
