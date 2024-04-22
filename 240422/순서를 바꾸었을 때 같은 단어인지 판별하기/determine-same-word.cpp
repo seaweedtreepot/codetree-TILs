@@ -13,7 +13,7 @@ int main() {
     bool flag = true;
     if(str1.length()!=str2.length()){
         cout << "No";
-        return;
+        return 0;
     }
     for(int i = 0; i < str1.length();i++){
         if(str1[i]!=str2[i]){
