@@ -11,7 +11,10 @@ int main() {
     sort(str2.begin() , str2.end());
 
     bool flag = true;
-
+    if(str1.length()!=str2.length()){
+        cout << "No";
+        return;
+    }
     for(int i = 0; i < str1.length();i++){
         if(str1[i]!=str2[i]){
             flag = false;
