@@ -17,14 +17,16 @@ int main() {
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
-    int temp = Smallest(arr[0],arr[1]);
-    //cout << "!" << endl;
-    int big = Biggest(arr[0],arr[1]);
-  //  cout << "!" << endl;
+    if(n==1){
+        cout << arr[0];
+    }else{
+        int big = Biggest(arr[0],arr[1]);
     for(int i = 2; i < n;i++){
         big = Biggest(big,arr[i]);
 
     }
     cout << big;
+    }
+    
     return 0;
 }
