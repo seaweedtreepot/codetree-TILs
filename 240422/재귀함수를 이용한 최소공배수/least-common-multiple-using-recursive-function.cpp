@@ -1,14 +1,39 @@
 #include <iostream>
 using namespace std;
-int Smallest(int a,int b){
-    if(a%b==0){
-        return b;
+
+int Smallest(int arr[],int idx){
+        int small = 0;
+        int num1;
+        if(idx == 0){
+            num1 = arr[idx];
+        }else{
+            num1 = Smallest(arr,idx-1);
+        }
+        
+        int num1_1 = num1;
+        int num2 = arr[idx+1];
+
+        if(num1 < num2){
+            int temp = num1;
+           num1 = num2;
+            num2 = temp;
+        }
+        while(1){
+            if(num1%num2==0){
+                small = num2;
+                break;
+            }
+        num1 = num1%num2;
+        int temp = num1;
+        num1 = num2;
+        num2 = temp;
     }
-    return Smallest(b,a%b);
+        small = (num1_1/small) * (arr[idx+1]/small) * small;
+        return small;
 }
-int Biggest(int a,int b){
-    return (a*b/(Smallest(a,b)));
-}
+
+
+
 int main() {
     // 여기에 코드를 작성해주세요.
     int n;
@@ -20,12 +45,7 @@ int main() {
     if(n==1){
         cout << arr[0];
     }else{
-        int big = Biggest(arr[0],arr[1]);
-    for(int i = 2; i < n;i++){
-        big = Biggest(big,arr[i]);
-
-    }
-    cout << big;
+        cout << Smallest(arr,n-2)<<endl;
     }
     
     return 0;
