@@ -23,7 +23,7 @@ bool cmp(Students a, Students b){
 }
 int main() {
     // 여기에 코드를 작성해주세요.
-    Students st[10];
+    Students st[1000];
     int n;
     cin >> n;
     int a,b;
