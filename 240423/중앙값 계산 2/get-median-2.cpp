@@ -10,8 +10,8 @@ int main() {
     for(int i =0; i < n;i++){
         cin >> arr[i];
         if(i%2==0){
-            sort(arr,arr+i);
-        cout << arr[i/2] << " ";
+            sort(arr,arr+i+1);
+            cout << arr[i/2] << " ";
         }
         
     }
