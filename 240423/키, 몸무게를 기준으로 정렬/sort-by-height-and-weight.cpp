@@ -15,7 +15,7 @@ bool cmp(Person a, Person b){
     if(a.height == b.height){
         return a.weight > b.weight;
     }
-    return a.height > b.height;
+    return a.height < b.height;
 }
 int main() {
     // 여기에 코드를 작성해주세요.
