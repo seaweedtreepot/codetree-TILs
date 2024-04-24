@@ -9,12 +9,19 @@ int main() {
     hour = 11;
     min = 11;
     int el_min =0;
-    if(min > c && hour > b){
-        if(a == 11){
-            cout << -1 ;
+    if(a == 11){
+        if(hour > b){
+            cout << -1; 
             return 0;
         }
+        else if (hour == b){
+            if(min > c){
+                cout << -1;
+                return 0;
+            }
+        }
     }
+    //11 4 15
    while(1){
     if(day == a && hour == b && min == c){
         break;
