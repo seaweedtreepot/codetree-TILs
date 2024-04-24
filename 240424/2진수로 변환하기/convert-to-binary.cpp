@@ -14,5 +14,8 @@ int main() {
     for(int j = i-1; j >= 0; j--){
         cout << arr[j];
     }
+    if(n==0){
+        cout << 0;
+    }
     return 0;
 }
