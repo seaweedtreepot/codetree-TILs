@@ -9,7 +9,7 @@ int main() {
     hour = 11;
     min = 11;
     int el_min =0;
-    if(min < c && hour < b){
+    if(min > c && hour > b){
         if(day == 11){
             cout << -1 ;
             return 0;
