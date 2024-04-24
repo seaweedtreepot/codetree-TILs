@@ -46,7 +46,8 @@ int main(){
         }
 
         days = -days;
-        cout << rvs_daysOfWeek[days%7];
+        days = 7- days%7;
+        cout << daysOfWeek[days%7];
     }
     
     return 0;
