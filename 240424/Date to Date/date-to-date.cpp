@@ -7,14 +7,18 @@ int main() {
     cin >> a >> b >> c >> d;
     int NumOfDays[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
     int temp = 0;
-    if(a+1 != c && a!=c){
-        for(int i = a; i < c; i++){
-            temp += NumOfDays[i];
-        }
+   
+    int a_days=0;
+    for(int i =0; i < a; i++){
+        a_days+=NumOfDays[i];
     }
-    a = NumOfDays[a]-b+1;
-    c = d;
+    a_days += b;
+    int c_days = 0;
+    for(int i = 0; i < c; i++){
+        c_days += NumOfDays[i];
+    }
+    c_days += d;
 
-    cout << a + c + temp;
+    cout << c_days - a_days +1;
     return 0;
 }
