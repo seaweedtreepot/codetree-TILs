@@ -12,7 +12,22 @@ class Point{
 };
 
 int Distance(Point x){
-    return x.x + x.y;
+    if(x.x > 0){
+        if(x.y > 0){
+            return x.x + x.y;
+        }
+        else {
+            return x.x - x.y;
+        }
+    }else{
+        if(x.y > 0){
+            return (-x.x) + x.y;
+        }
+        else{
+            return (-x.x) - x.y;
+        }
+    }
+    
 }
 
 bool cmp(Point x, Point y){
