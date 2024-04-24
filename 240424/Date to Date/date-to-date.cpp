@@ -6,18 +6,15 @@ int main() {
     int a,b,c,d;
     cin >> a >> b >> c >> d;
     int NumOfDays[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
-    int temp=0;
-    for(int i =1 ; i < a; i++){
-        temp += NumOfDays[i];
+    int temp = 0;
+    if(a+1 != c){
+        for(int i = a; i < c; i++){
+            temp += NumOfDays[i];
+        }
     }
-    a+=temp;
-    a+=b;
-    temp =0;
-    for(int i =1 ; i < c; i++){
-        temp += NumOfDays[i];
-    }
-    c+= temp;
-    c+=d;
-    cout << c-a;
+    a = NumOfDays[a]-b+1;
+    c = d;
+
+    cout << a + c + temp;
     return 0;
 }
