@@ -7,7 +7,7 @@ int main() {
     cin >> a >> b >> c >> d;
     int NumOfDays[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
     int temp = 0;
-    if(a+1 != c){
+    if(a+1 != c && a!=c){
         for(int i = a; i < c; i++){
             temp += NumOfDays[i];
         }
