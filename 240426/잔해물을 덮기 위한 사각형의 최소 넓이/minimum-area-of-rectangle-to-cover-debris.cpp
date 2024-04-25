@@ -5,16 +5,16 @@ int main() {
     int x1,x2,y1,y2;
     int plane[2001][2001]={};
     cin >>x1 >> y1 >> x2 >> y2;
-    for(int i = x1; i <x2;i++ ){
+    for(int i = x1+1000; i <x2+1000;i++ ){
         for(int j = y1; j < y2; j++){
-            plane[i+1000][j+1000]=true;
+            plane[i][j]=true;
         }
     }
 
     cin >>x1 >> y1 >> x2 >> y2;
-    for(int i = x1; i <x2;i++ ){
+    for(int i = x1+1000; i <x2+1000;i++ ){
         for(int j = y1; j < y2; j++){
-            plane[i+1000][j+1000]=false;
+            plane[i][j]=false;
         }
     }
 
