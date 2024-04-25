@@ -3,18 +3,20 @@ using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
     int x1,x2,y1,y2;
-    int plane[2001][2001]={};
+    bool plane[2001][2001]={};
     cin >>x1 >> y1 >> x2 >> y2;
     for(int i = x1+1000; i <x2+1000;i++ ){
-        for(int j = y1; j < y2; j++){
+        for(int j = y1+1000; j < y2+1000; j++){
             plane[i][j]=true;
+            //cout << i-1000 << " " << j - 1000 << endl;
         }
     }
 
     cin >>x1 >> y1 >> x2 >> y2;
     for(int i = x1+1000; i <x2+1000;i++ ){
-        for(int j = y1; j < y2; j++){
+        for(int j = y1+1000; j < y2+1000; j++){
             plane[i][j]=false;
+           // cout << i-1000 << " " << j - 1000 << endl;
         }
     }
 
@@ -24,22 +26,20 @@ int main() {
             if(plane[i][j]){
                 if(x_max < i){
                     x_max = i;
-                    if(y_max < j){
-                        y_max = j;
-                    }else if(y_min > j){
-                        y_min = j;
-                    }
-                }else if(x_min > i){
-                    x_min = i;
-                    if(y_max < j){
-                        y_max = j;
-                    }else if(y_min > j){
-                        y_min = j;
-                    }
                 }
+                if(x_min > i){
+                    x_min = i;
+                }
+                if(y_max < j){
+                        y_max = j;
+                    }
+                    if(y_min > j){
+                        y_min = j;
+                    }
             }
         }
     }
+    //cout << x_min << " " << y_min << " "<<x_max << " " << y_max<<endl;
     int cnt =0;
     for(int i = x_min; i <=x_max;i++){
         for(int j = y_min; j <= y_max; j++){
