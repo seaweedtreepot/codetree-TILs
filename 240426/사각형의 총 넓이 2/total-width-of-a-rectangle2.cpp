@@ -10,7 +10,7 @@ int main() {
         cin >> x1 >> y1 >> x2 >> y2;
         for(int j = x1; j < x2;j++){
             for(int k = y1; k < y2;k++){
-                plane[j][k]=true;
+                plane[j+100][k+100]=true;
             }   
         }
     }
