@@ -7,11 +7,13 @@ int main() {
     int current=0;
     char cur;
     int arr[2001]={};
+    char prev = 'a';
    // arr[1000]= 1;
 
     for(int i =0; i < n; i++){
         cin >> x >> cur;
-        arr[current+1000]++;
+
+        if(prev!=cur)arr[current+1000]++;
         if(cur == 'R'){
             while(x!=0){
                 current++;
@@ -26,6 +28,7 @@ int main() {
                 x--;
             }
         }
+        prev = cur;
         //cout << current << endl;
     }
    // cout << endl;
