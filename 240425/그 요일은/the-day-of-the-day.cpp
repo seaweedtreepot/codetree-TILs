@@ -42,7 +42,7 @@ int main() {
             m1++;
         }
     }
-    cout << (dates-day )/7;
+    cout << (dates-day)/7 + ((dates>=day)?1:0);
     
     
     return 0;
