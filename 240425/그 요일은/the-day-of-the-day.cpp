@@ -36,15 +36,13 @@ int main() {
         }
         d1++;
         dates++;
-        if(dates%7==day){
-            cnt++;
-        }
+        
         if(d1 > month[m1]){
             d1 = 1;
             m1++;
         }
     }
-    cout << cnt;
+    cout << (dates-day )/7;
     
     
     return 0;
