@@ -7,7 +7,7 @@ int main() {
     int current=0;
     char cur;
     int arr[2001]={};
-    arr[1000]= 1;
+   // arr[1000]= 1;
 
     for(int i =0; i < n; i++){
         cin >> x >> cur;
@@ -28,7 +28,7 @@ int main() {
         }
         //cout << current << endl;
     }
-    cout << endl;
+   // cout << endl;
     int cnt =0;
     for(int i = 0; i < 2000;i++){
         if(arr[i]>=2 && arr[i+1]>=2){
