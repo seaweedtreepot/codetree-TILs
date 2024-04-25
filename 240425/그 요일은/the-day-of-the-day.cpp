@@ -24,7 +24,7 @@ int main() {
     string SevenDays[7] = {"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
     int month[13] = { 0,31,29,31,30,31,30,31,31,30,31,30,31};
     int m1,d1,m2,d2;
-    int cnt = 1;
+    int cnt = 0;
     cin >> m1 >> d1 >> m2 >> d2;
     string A;
     cin >> A;
@@ -36,21 +36,16 @@ int main() {
         }
         d1++;
         dates++;
+        if(dates%7==day){
+            cnt++;
+        }
         if(d1 > month[m1]){
             d1 = 1;
             m1++;
         }
     }
-
-    dates -=  day-1;
-    if(dates<=0){
-        cout << 0;
-        return 0;
-    }else{
-
-    cnt += (dates)/7;
     cout << cnt;
-    }
+    
     
     return 0;
 }
