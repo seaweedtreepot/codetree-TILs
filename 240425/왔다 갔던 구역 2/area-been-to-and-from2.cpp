@@ -8,35 +8,29 @@ int main() {
     char cur;
     int arr[2001]={};
     char prev = 'a';
-   // arr[1000]= 1;
-
-    for(int i =0; i < n; i++){
+    char carr[2001];
+    int cnt =0;
+    for(int i = 0; i < n; i++){
         cin >> x >> cur;
 
-        if(prev!=cur)arr[current+1000]++;
         if(cur == 'R'){
             while(x!=0){
-                current++;
                 arr[current+1000]++;
+                current++;
                 x--;
             }
-            
-        }else if (cur=='L'){
+        }else{
             while(x!=0){
                 current--;
                 arr[current+1000]++;
                 x--;
             }
         }
-        prev = cur;
-        //cout << current << endl;
     }
-   // cout << endl;
-    int cnt =0;
-    for(int i = 0; i < 2000;i++){
-        if(arr[i]>=2 && arr[i+1]>=2){
+
+    for(int i = 0; i < 2001; i++){
+        if(arr[i]>=2){
             cnt++;
-         //   cout << i-1000 << " " << i-999 << endl;
         }
     }
     cout << cnt;
