@@ -17,7 +17,7 @@ int main() {
     for(int i = 0; i < n; i++){
         if(i==0){
             cnt++;
-        }else if(arr[i]!= arr[i+1]){
+        }else if(arr[i]!= arr[i-1]){
             cnt = 0;
         }else{
             cnt++;
