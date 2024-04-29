@@ -4,7 +4,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int a_arr[1000000]={};
     int b_arr[1000000]={};
-    int n, m,cnt=1,locate = 0;   
+    int n, m,cnt=0,locate = 0;   
     cin >> n >> m;
     int cur;
     char dir,prev;
@@ -13,9 +13,9 @@ int main() {
         
         for(int j =0; j < cur; j++){
             if(dir=='R'){
-                a_arr[cnt++]=++locate;
+                a_arr[++cnt]=++locate;
             }else{
-                a_arr[cnt++]=--locate;
+                a_arr[++cnt]=--locate;
             }
         }
     }
@@ -29,9 +29,9 @@ int main() {
         cin >> dir >> cur;
         for(int j =0; j < cur; j++){
             if(dir=='R'){
-                b_arr[cnt++]=++locate;
+                b_arr[++cnt]=++locate;
             }else{
-                b_arr[cnt++]=--locate;
+                b_arr[++cnt]=--locate;
             }
         }
     }
