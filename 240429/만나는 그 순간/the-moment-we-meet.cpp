@@ -2,8 +2,8 @@
 using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
-    int a_arr[1000]={};
-    int b_arr[1000]={};
+    int a_arr[2000]={};
+    int b_arr[2000]={};
     int n, m,cnt=1,locate = 0;   
     cin >> n >> m;
     int cur;
