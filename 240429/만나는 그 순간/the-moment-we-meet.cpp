@@ -23,7 +23,7 @@ int main() {
     for(int i = 0; i < cnt; i++){
         //cout << a_arr[i] << endl;
     }
-    cnt = 1;
+    cnt = 0;
     locate = 0;
     for(int i = 0; i < m; i++){
         cin >> dir >> cur;
