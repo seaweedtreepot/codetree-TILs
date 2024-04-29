@@ -14,18 +14,19 @@ int main() {
 
     int cnt = 0;
     int max = 1;
-    for(int i = 0; i < n-1; i++){
-        cnt++;
+    for(int i = 0; i < n; i++){
+        if(i==0){
+            cnt++;
+        }else if(arr[i]!= arr[i+1]){
+            cnt = 0;
+        }else{
+            cnt++;
+        }
 
-        if(cnt > max){
+        if(max < cnt){
             max = cnt;
         }
 
-        if(arr[i]!= arr[i+1]){
-            cnt=0;
-        }
-
-       // cout << i+1 << ":  " << max << " " << cnt <<endl;
     }
     cout << max ;
     return 0;
