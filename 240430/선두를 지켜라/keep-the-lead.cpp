@@ -4,7 +4,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int n,m;
     int v,t;
-    int a_arr[1000]={}, b_arr[1000]={};
+    int a_arr[1000000]={}, b_arr[1000000]={};
 
     cin >> n  >> m;
     int a_cnt = 1, b_cnt = 1;
@@ -23,7 +23,7 @@ int main() {
 
     int a_distance =0,b_distance = 0;
     int ans_cnt=0;
-    int arr[1000]={};
+    int arr[1000000]={};
     char prev = '0';
     for(int i = 1; i < b_cnt; i++){
         a_distance+=a_arr[i];
