@@ -15,9 +15,17 @@ class Disease{
 };
 
 void handShake(int a, int b, Disease developer[]){
+    if(a==0 && 0==b){
+        return;
+    }
     if(developer[a].healthy && developer[b].healthy){//둘다 감염
-        developer[a].cnt--;
-        developer[b].cnt--;
+        if(developer[a].cnt != 0 ){
+            developer[a].cnt--;
+        }
+
+        if(developer[b].cnt!=0){
+            developer[b].cnt--;
+        }
     }else if(developer[a].healthy && !developer[b].healthy){//a만 감염
         if(developer[a].cnt!=0){
             developer[a].cnt--;
@@ -32,9 +40,9 @@ void handShake(int a, int b, Disease developer[]){
             developer[a].cnt = 2;
             developer[a].healthy = true;
         }
+    }else{
+
     }
-
-
 
     return;
 }
@@ -48,15 +56,16 @@ int main() {
     developer[p].cnt = 2;
 
     pair<int,int>timeline[251];
-   for(int i = 0; i < T; i++){
-    cin >> t >> x >> y;
+
+   
+    for(int i = 0; i < T; i++){
+        cin >> t >> x >> y;
         timeline[t]= make_pair(x,y);
-   }
+    }
 
    for(int i = 1; i <= 250; i++){
     int a = timeline[i].first;//i초일때 악수한 a
     int b = timeline[i].second;//i초일때 악수한 b
-
     handShake(a,b,developer);
    }
 
