@@ -48,7 +48,7 @@ int main() {
 
         if(cur != prev){
             ans_cnt++;
-            cout << a_dis << " " << b_dis << endl;
+            //cout << a_dis << " " << b_dis << endl;
         }
         
     }
