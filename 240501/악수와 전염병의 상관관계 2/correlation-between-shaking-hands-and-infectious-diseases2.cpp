@@ -14,30 +14,30 @@ class Disease{
     }
 };
 
-void handShake(int a, int b, Disease developer[]){
-    if(a==0 && 0==b){
-        return;
+void handShake(int a, int b, Disease developer[],int k){
+    if(a==b){
+         return;
     }
     if(developer[a].healthy && developer[b].healthy){//둘다 감염
-        if(developer[a].cnt != 0 ){
+        if(developer[a].cnt > 0 ){
             developer[a].cnt--;
         }
 
-        if(developer[b].cnt!=0){
+        if(developer[b].cnt>0){
             developer[b].cnt--;
         }
     }else if(developer[a].healthy && !developer[b].healthy){//a만 감염
-        if(developer[a].cnt!=0){
+        if(developer[a].cnt>0){
             developer[a].cnt--;
             
-            developer[b].cnt = 2;
+            developer[b].cnt = k;
             developer[b].healthy = true;
         }
     }else if(!developer[a].healthy && developer[b].healthy){//b만 감염
-        if(developer[b].cnt!=0){
+        if(developer[b].cnt>0){
             developer[b].cnt--;
             
-            developer[a].cnt = 2;
+            developer[a].cnt = k;
             developer[a].healthy = true;
         }
     }else{
@@ -50,12 +50,11 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int n,k,p,T,t,x,y;
     Disease developer[101];
+    pair<int,int>timeline[251];
     cin >> n >> k >> p >> T;
 
     developer[p].healthy = true;
-    developer[p].cnt = 2;
-
-    pair<int,int>timeline[251];
+    developer[p].cnt = k;
 
    
     for(int i = 0; i < T; i++){
@@ -66,7 +65,7 @@ int main() {
    for(int i = 1; i <= 250; i++){
     int a = timeline[i].first;//i초일때 악수한 a
     int b = timeline[i].second;//i초일때 악수한 b
-    handShake(a,b,developer);
+    handShake(a,b,developer,k);
    }
 
     for(int i = 1; i <= n; i++){
