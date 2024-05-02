@@ -8,7 +8,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int n,t, r, c,dir_num;
     char d;
-    int dx[4] = {1,0,-1,0}, dy[4] = {0,-1,0,1};
+    int dx[4] = {1,0,-1,0}, dy[4] = {0,1,0,-1};
     cin >> n>>t;
     cin >> r >> c >> d;
 
@@ -24,6 +24,7 @@ int main() {
 
     
     for(int i = 0; i < t; i++){
+        //cout << r << " " << c << endl;
         //cout << i+1 << " : ";
         c += dx[dir_num];
         r += dy[dir_num];
