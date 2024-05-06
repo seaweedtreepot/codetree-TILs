@@ -6,6 +6,9 @@ bool InRange(int n,int x,int y){
 }
 int main() {
     // 여기에 코드를 작성해주세요.
+    ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
     int n,dx[4]= {0,1,0,-1},dy[4]={1,0,-1,0},k=0,dir_num=1,nx=0,ny=0,cnt=0;
     char plain[1000][1000];//오른쪽 아래 왼쪽 위
     
