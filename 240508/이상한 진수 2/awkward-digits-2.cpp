@@ -3,21 +3,37 @@
 using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
-    int a;
+    string a;
     cin >> a;
     int n=0;
     int prod = 1;
     int max = 0;
-    while(a!=0){
-        if(a%10==0){
-            max = prod;
+    
+    for(int i =0; i < a.length() ; i++){
+        string cstr = a; int cur =0;
+        prod =1;
+        n=0;
+        if(a[i]=='0'){
+            cstr[i]='1';
+        }else{
+            cstr[i]='0';
         }
-        n+=a%10*prod;
-        a/=10;
-        prod*=2;
-    }//원본 n
+        for(int j = a.length()-1; j>=0; j--){
+            if(cstr[j]=='0'){
+                cur = 0;
+            }else{
+                cur = 1;
+            }
+            n+= cur * prod;
+            prod *=2;
+        }
+        if(n>max){
+            max = n;
+            //cout << max;
+        }
+        
+    }
 
-    n+=max;
-    cout << n;
+    cout << max;
     return 0;
 }
