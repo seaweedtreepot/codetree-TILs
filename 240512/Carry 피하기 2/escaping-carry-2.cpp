@@ -3,16 +3,16 @@
 
 bool IsCarried(int a,int b,int c){
     bool flag = true;
-    while(a!=0 && b!=0 && c!=0){
+    while(a!=0 || b!=0 || c!=0){
         int temp = 0;
         temp+=a%10;
         temp+=b%10;
         temp+=c%10;
-        a/=10;b/=10;c/=10;
         if(temp > 9){
             flag = false;
             break;
         }
+        a/=10;b/=10;c/=10;
     }
 
     return flag;
