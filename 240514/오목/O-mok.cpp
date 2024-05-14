@@ -40,6 +40,7 @@ int main() {
     }
     int n= 19;
     int ans_col=0,ans_row=0;
+    int flag = false;
     for(int i = 0; i < n-4; i++){
         for(int j = 0; j < n-4; j++){
             if(arr[i][j]==arr[i][j+1]&& arr[i][j]!=0){
@@ -47,7 +48,8 @@ int main() {
                     cnt = arr[i][j];
                     ans_col=i+1;
                     ans_row=j+3;
-                    //cout << i << " "<<j<<endl;  
+                    //cout << i << " "<<j<<endl;
+                    flag = true;
                     break;
                 }
             }else if(arr[i][j]==arr[i+1][j] &&arr[i][j]!=0){
@@ -55,17 +57,23 @@ int main() {
                     cnt = arr[i][j];
                     ans_col= i+3;
                     ans_row= j+1;
+                    flag = true;
+                    //cout << i << " " << j <<endl;
                     break;
                 }
             }else if(arr[i][j]==arr[i+1][j+1] &&arr[i][j]!=0){
                 if(IsWin3(arr,i,j)){
                     cnt = arr[i][j];
-                    ans_col = i;
-                    ans_row = j;
+                    ans_col = i+3;
+                    ans_row = j+3;
+                    flag = true;
                     break;
                 }
             }
         
+        }
+        if(flag){
+            break;
         }
     }
 
