@@ -54,17 +54,19 @@ int main() {
             cin >> arr[i][j];
         }
     }
-    int n= 19;
     int ans_col=0,ans_row=0;
     int flag = false;
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
+    for(int i = 0; i < 19; i++){
+        for(int j = 0; j < 19; j++){
+            if(i>14 && j>14){
+                continue;
+            }
             if(arr[i][j]==arr[i][j+1]&& arr[i][j]!=0){
                 if(IsWin1(arr,i,j)){
                     cnt = arr[i][j];
                     ans_col=i+1;
                     ans_row=j+3;
-                    //cout << i << " "<<j<<endl;
+                    
                     flag = true;
                     break;
                 }
