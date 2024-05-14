@@ -26,9 +26,10 @@ int main() {
                 for(int q = 0 ; q < n-2; q++){
                     cnt = a;
                     for(int w = q; w<=q+2;w++){
-                        if(h==g && (q<=i && (i-2)<=q)) continue;
+                        if(h==g && (q<=i+2 && (i-2)<=q)) continue;
                         if(arr[g][w]==1){
                             cnt++;
+                            
                         }
                     }
                     if(ans < cnt){
