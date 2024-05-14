@@ -33,6 +33,18 @@ bool IsWin3(int arr[][19],int a,int b){
     }
     return flag;
 }
+bool IsWin4(int arr[][19],int a,int b){
+    bool flag = true;
+    int j=b;
+    for(int i = a;i < a+5;i++){
+        if(arr[i][j]!=arr[a][b]){
+            flag = false;
+            break;
+        }
+        j--;
+    }
+    return flag;
+}
 int main() {
     // 여기에 코드를 작성해주세요.
     int arr[19][19];
@@ -57,7 +69,7 @@ int main() {
                     break;
                 }
             }
-            if(arr[i][j]==arr[i+1][j] &&arr[i][j]!=0){
+            if(arr[i][j]==arr[i+1][j] &&arr[i][j]!=0 ){
                 if(IsWin2(arr,i,j)){
                     cnt = arr[i][j];
                     ans_col= i+3;
@@ -72,6 +84,16 @@ int main() {
                     cnt = arr[i][j];
                     ans_col = i+3;
                     ans_row = j+3;
+                    flag = true;
+                    break;
+                }
+            }
+            if(arr[i][j]==arr[i+1][j-1] &&arr[i][j]!=0 && j>3){
+                //cout << i << " "<<j << endl;
+                if(IsWin4(arr,i,j)){
+                    cnt = arr[i][j];
+                    ans_col = i+3;
+                    ans_row = j-1;
                     flag = true;
                     break;
                 }
