@@ -107,6 +107,7 @@ int main() {
     //white = 2 black = 1 draw = 0
     
     cout << cnt << endl;
-    cout << ans_col << " " <<ans_row;
+    if(cnt!=0){
+        cout << ans_col << " " <<ans_row;
     return 0;
 }
