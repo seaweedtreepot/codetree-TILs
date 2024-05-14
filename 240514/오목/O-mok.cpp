@@ -3,18 +3,20 @@ using namespace std;
 
 bool IsWin1(int arr[][19],int a,int b){
     bool flag = true;
-    for(int i = b;i < 5;i++){
+    for(int i = b;i < b+5;i++){
         if(arr[a][i]!=arr[a][b]){
             flag = false;
+            break;
         }
     }
     return flag;
 }
 bool IsWin2(int arr[][19],int a,int b){
     bool flag = true;
-    for(int i = a;i < 5;i++){
+    for(int i = a;i < a+5;i++){
         if(arr[a][b]!=arr[i][b]){
             flag = false;
+            break;
         }
     }
     return flag;
@@ -22,10 +24,12 @@ bool IsWin2(int arr[][19],int a,int b){
 bool IsWin3(int arr[][19],int a,int b){
     bool flag = true;
     int j=b;
-    for(int i = a;i < 5;i++){
-        if(arr[a][b]!=arr[i][j++]){
+    for(int i = a;i < a+5;i++){
+        if(arr[i][j]!=arr[a][b]){
             flag = false;
+            break;
         }
+        j++;
     }
     return flag;
 }
@@ -52,7 +56,8 @@ int main() {
                     flag = true;
                     break;
                 }
-            }else if(arr[i][j]==arr[i+1][j] &&arr[i][j]!=0){
+            }
+            if(arr[i][j]==arr[i+1][j] &&arr[i][j]!=0){
                 if(IsWin2(arr,i,j)){
                     cnt = arr[i][j];
                     ans_col= i+3;
@@ -61,7 +66,8 @@ int main() {
                     //cout << i << " " << j <<endl;
                     break;
                 }
-            }else if(arr[i][j]==arr[i+1][j+1] &&arr[i][j]!=0){
+            }
+            if(arr[i][j]==arr[i+1][j+1] &&arr[i][j]!=0){
                 if(IsWin3(arr,i,j)){
                     cnt = arr[i][j];
                     ans_col = i+3;
@@ -70,7 +76,6 @@ int main() {
                     break;
                 }
             }
-        
         }
         if(flag){
             break;
