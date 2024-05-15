@@ -22,12 +22,15 @@ int main() {
         for(int f = 0; f < m; f++){
             for(int j = 0; j < copyB.size();j++){
             if(A[i+f]==copyB[j]){
+                //cout << copyB[j] << " " << i+f << " "<< i <<endl;
                 copyB.erase(copyB.begin()+j);
+                break;
             }
         }
         }
         
         if(copyB.size()==0){
+            //cout << i << endl;
             cnt++;
         }
     }
