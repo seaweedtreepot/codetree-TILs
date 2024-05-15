@@ -5,7 +5,7 @@ int main() {
     int n,k,c;
 
     cin >>  n >> k;
-    int arr[101]={};
+    int arr[10001]={};
     char a;
     for(int i = 0 ; i < n; i++){
         cin >> c >> a;
@@ -16,7 +16,7 @@ int main() {
         }
     }
     int max= 0;
-    for(int i = 1; i <= 101-k; i++){
+    for(int i = 1; i <= 10001-k; i++){
         int sum = 0;    
         for(int j = i; j <= i+k;j++){
             sum += arr[j];
