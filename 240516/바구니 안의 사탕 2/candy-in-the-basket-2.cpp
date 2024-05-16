@@ -11,6 +11,14 @@ int main() {
         arr[cur2] += cur;
     }
     int max = 0;
+    if(k > 50){
+        int sum = 0;
+        for(int i = 0; i < 101; i++){
+            sum += arr[i];
+        }
+        cout << sum;
+        return 0;
+    }
     for(int i = k; i < 101-k ;i++){
         int sum = 0;
         for(int j = i-k; j <= i+k; j++){
