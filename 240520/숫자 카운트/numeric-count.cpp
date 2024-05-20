@@ -55,10 +55,13 @@ int main() {
         }
     }
 
-    for(int i = 0; i < 10; i++){
-        for(int j = 0; j < 10; j++){
-            for(int k = 0; k < 10; k++){
+    for(int i = 1; i < 10; i++){
+        for(int j = 1; j < 10; j++){
+            for(int k = 1; k < 10; k++){
                 int ans_cnt=0;
+                if(i==j || j == k || k == i ){
+                    continue;
+                }
                 for(int q = 0; q < n; q++){
                     int cnt1=0,cnt2=0;
                     cnt1 = Cnt1Of(i,j,k,arr[q][0]);
@@ -68,7 +71,6 @@ int main() {
                         //cout << arr[q][0] << " " << cnt1 << " " << cnt2 << endl;
                         //cout << i << j << k << endl;
                     }
-                    
                 }
                 if(ans_cnt==n){
                     ans++;
