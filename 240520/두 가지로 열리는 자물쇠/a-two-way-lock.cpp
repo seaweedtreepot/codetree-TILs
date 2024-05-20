@@ -18,7 +18,7 @@ bool simul(int a, int b, int n){
     a=temp;
     for(int i = 0; i < 2; i++){
         a++;
-        if(a==n){
+        if(a==(n+1)){
             a=1;
         }
         if(a==b){
@@ -61,15 +61,15 @@ int main() {
             for(int k = 1; k <= n; k++){
                 if(isOpen(pwd1,i,j,k,n)&&isOpen(pwd2,i,j,k,n)){
                     cnt++;
-                }else if(isOpen(pwd2,i,j,k,n)){
+                }
+                else if(isOpen(pwd2,i,j,k,n)){
                     cnt++;
                 }else if(isOpen(pwd1,i,j,k,n)){
                     cnt++;
                 }
-            }
         }
     }
-
+    }
     cout << cnt;
     return 0;
 }
