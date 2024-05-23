@@ -3,6 +3,7 @@
 #include <climits>
 #include <cstdlib>
 using namespace std;
+
 int main() {
     // 여기에 코드를 작성해주세요.
     int n,input1,input2;
@@ -19,7 +20,7 @@ int main() {
         for(int j = i+1; j < n; j++){
             if(grid[i].second == grid[j].second){
                 int x_axis = abs(grid[i].first-grid[j].first);
-                int y_axis;
+                int y_axis=0;
                 for(int k = 0; k < n; k++){
                     if(i==k || j==k){
                         continue;
@@ -28,12 +29,12 @@ int main() {
                     if(grid[i].first==grid[k].first){
                         y_axis = abs(grid[i].second - grid[k].second);
                     }
-                    if(grid[j].first==grid[k].first){
+                    else if(grid[j].first==grid[k].first){
                         y_axis = abs(grid[j].second - grid[k].second);
                     }
-                }
-                if(max < x_axis * y_axis){
-                    max = x_axis*y_axis;
+                    if(max < x_axis * y_axis){
+                        max = x_axis*y_axis;
+                    }
                 }
             }
         }
