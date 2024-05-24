@@ -13,23 +13,30 @@ int main() {
         cin >> stdt[i];
     }
 
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < n; i++){//할인
         int cnt = 0;
         int price = 0;
-        for(int j = 0; j < n; j++){
-            if(i==j){
-                price+= stdt[j]/2;
-                cnt++;
-            }else{
-                price+=stdt[j];
-                cnt++;
+        for(int j = i; j < n; j++){//시작
+            for(int k = j; k < n; k++){//더하기
+                if(k==i){
+                    if(price + stdt[k]/2>b){
+                        continue;
+                    }else{
+                        price += stdt[k]/2;
+                        cnt++;
+                    }
+                }else{
+                    if(price + stdt[k]>b){
+                        continue;
+                    }else{
+                        price += stdt[k];
+                        cnt++;
+                    }
+                }
+                if(max < cnt ){
+                    max = cnt;
+                }
             }
-            if(price <=b && cnt > max){
-                max = cnt;
-            }else if(price > b){
-                break;
-            }
-
         }
     }
 
