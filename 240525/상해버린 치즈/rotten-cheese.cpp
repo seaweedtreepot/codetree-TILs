@@ -29,15 +29,15 @@ int main() {
     }
     sort(time_table_sick,time_table_sick+s);
 
-   /* for(int i= 0; i < d; i++){
+    for(int i= 0; i < d; i++){
         cout << get<0>(time_table_eat[i]) << " "<< get<1>(time_table_eat[i])<<" "<<
         get<2>(time_table_eat[i])<<endl;
-    } */  
+    }   
 
-    /*for(int i = 0; i < s; i++){
+    for(int i = 0; i < s; i++){
         cout << time_table_sick[i].first << " "<< time_table_sick[i].second<<" "
         <<endl;
-    }*/
+    }
 
     for(int i = 0; i < s; i++){
         for(int j = 0;j<d; j++){
@@ -48,12 +48,16 @@ int main() {
             }
         }
     }
-
+    /*cout << endl << endl;
+    for(int i = 0; i < m; i++){
+        cout << cheese[i] <<endl;
+    }
+    cout << endl;*/
     for(int i = 0; i < m; i++){
         cnt=0;
         if(cheese[i]==s){
             for(int j = 0; j < d; j++){
-                if(get<1>(time_table_eat[j])==i+1){
+                if(get<1>(time_table_eat[j])<=i+1){
                     cnt++;
                 }
             }
