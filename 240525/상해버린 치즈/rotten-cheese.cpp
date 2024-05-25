@@ -15,7 +15,7 @@ int main() {
     int cheese[50];
     bool people[50]={};
     int input1,input2,input3;
-    tuple<int,int,int> time_table_eat[101];
+    tuple<int,int,int> time_table_eat[1001];
     pair<int,int> time_table_sick[101];
     cin >> n >> m >> d >> s;
 
