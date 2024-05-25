@@ -13,6 +13,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int n,m,d,s,max=0,cnt=0;
     int cheese[50];
+    bool people[50]={};
     int input1,input2,input3;
     tuple<int,int,int> time_table_eat[101];
     pair<int,int> time_table_sick[101];
@@ -57,8 +58,10 @@ int main() {
         cnt=0;
         if(cheese[i]>=s){
             for(int j = 0; j < d; j++){
-                if(get<1>(time_table_eat[j])==i+1){
+                if(get<1>(time_table_eat[j])==i+1 &&
+                !people[get<0>(time_table_eat[j])]){
                     cnt++;
+                    people[get<0>(time_table_eat[j])]=true;
                 }
             }
         }
