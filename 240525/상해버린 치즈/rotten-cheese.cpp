@@ -12,7 +12,7 @@ bool cmp(tuple<int,int,int> v1){
 int main() {
     // 여기에 코드를 작성해주세요.
     int n,m,d,s,max=0,cnt=0;
-    int cheese[4];
+    int cheese[50];
     int input1,input2,input3;
     tuple<int,int,int> time_table_eat[101];
     pair<int,int> time_table_sick[101];
@@ -29,10 +29,10 @@ int main() {
     }
     sort(time_table_sick,time_table_sick+s);
 
-    /*for(int i= 0; i < d; i++){
+   /* for(int i= 0; i < d; i++){
         cout << get<0>(time_table_eat[i]) << " "<< get<1>(time_table_eat[i])<<" "<<
         get<2>(time_table_eat[i])<<endl;
-    }*/   
+    } */  
 
     /*for(int i = 0; i < s; i++){
         cout << time_table_sick[i].first << " "<< time_table_sick[i].second<<" "
@@ -49,7 +49,7 @@ int main() {
         }
     }
 
-    for(int i = 0; i < 4; i++){
+    for(int i = 0; i < m; i++){
         cnt=0;
         if(cheese[i]==s){
             for(int j = 0; j < d; j++){
