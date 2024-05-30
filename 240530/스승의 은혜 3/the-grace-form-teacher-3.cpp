@@ -13,25 +13,25 @@ int main() {
         p[i] = make_pair(input1,input2);
     }
 
-    sort(p,p+n);
+    
     for(int i = 0; i < n; i++){
         //cout << p[i].first << " " << p[i].second<<endl;
     }
     for(int i = 0; i < n; i++){//반값받을 학생
+        int temp[1000];
+        for(int j = 0; j < n; j++){
+            if(i == j){
+                temp[j] = p[j].first/2 + p[j].second;
+            }else{
+                temp[j] = p[j].first + p[j].second;
+            }
+        }
+        sort(temp,temp+n);
         int sum = 0;
         int cnt = 0;
         for(int j = 0; j < n; j++){
-            if(i==j){
-                sum += p[j].first/2 + p[j].second;
-            }else{
-                sum += p[j].first + p[j].second;
-            }
+            sum += temp[j];
             if(sum > b){
-                if(i==j){
-                    sum -= p[j].first/2 + p[j].second;
-                }else{
-                    sum -= p[j].first + p[j].second;
-                }
                 break;
             }else{
                 cnt++;
