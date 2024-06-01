@@ -1,9 +1,10 @@
 #include <iostream>
 #include <cstdlib>
+#include <climits>
 using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
-    int n,min=100;
+    int n,min=INT_MAX;
     int arr[100];
 
     cin >> n;
