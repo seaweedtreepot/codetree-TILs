@@ -11,7 +11,7 @@ int main() {
     while(i*a < c){
         //cout << "working" << endl;
         max = i*a;
-        while(max<c){
+        while(max<=c){
             max += b;
         }
         max -= b;
