@@ -30,7 +30,7 @@ int main() {
                         cntB++;
                     }
                 }
-                if(cntA + cntB == 3 && cntA<3){
+                if(cntA + cntB == 3 && cntA<3 && cntB<3){
                     teams[i][j]=true;
                 }
             }
@@ -49,7 +49,7 @@ int main() {
                         cntB++;
                     }
                 }
-                if(cntA + cntB == 3 && cntA<3){
+                if(cntA + cntB == 3 && cntA<3&& cntB<3){
                     //cout << 'a' << endl;
                     teams[i][j]=true;
                 }
@@ -68,7 +68,7 @@ int main() {
                         cntB++;
                     }
                 }
-                if(cntA + cntB == 3 && cntA<3){
+                if(cntA + cntB == 3 && cntA<3&& cntB<3){
                     //cout << 'a' << endl;
                     teams[i][j]=true;
                 }
@@ -85,7 +85,7 @@ int main() {
                         cntB++;
                     }
                 }
-                if(cntA + cntB == 3 && cntA<3){
+                if(cntA + cntB == 3 && cntA<3 && cntB<3){
                     //cout << 'a' << endl;
                     teams[i][j]=true;
                 }
