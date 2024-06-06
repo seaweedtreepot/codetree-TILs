@@ -1,117 +1,103 @@
 #include <iostream>
 #include <string>
 using namespace std;
+int bingo[3][3];
+int pairs[10][10]={};
+int ans_cnt = 0;
+
 int main() {
-    // 여기에 코드를 작성해주세요.
-    int arr[3][3];
-    int ans[10][10] = {};
     string input;
+    int ans = 0;
+    bool teams[10][10] = {};
+
     for(int i = 0; i < 3; i++){
         cin >> input;
         for(int j = 0; j < 3; j++){
-            arr[i][j] = input[j]-48;
+            bingo[i][j] = input[j]-48;
         }
     }
-
-
-    for(int i = 0; i < 3; i++){
-        int digits[10]={};
-        for(int j = 0; j < 3; j++){
-            digits[arr[i][j]]++;
-        }
-        int cnt = 0;
-        for(int j = 0; j < 10; j++){
-            if(digits[j]!=0){
-                cnt++;
-            }
-        }
-        if(cnt == 2){
-            int afj[2] = {};
-            int x = 0;
-            for(int j = 0; j < 10; j++){
-                if(digits[j]!=0){
-                    afj[x++] = j;
-                }
-            }
-            ans[afj[0]][afj[1]]++;
-        }
-    }
-
-    for(int i = 0; i < 3; i++){
-        int digits[10]={};
-        for(int j = 0; j < 3; j++){
-            digits[arr[j][i]]++;
-        }
-        int cnt = 0;
-        for(int j = 0; j < 10; j++){
-            if(digits[j]!=0){
-                cnt++;
-            }
-        }
-        if(cnt == 2){
-            int afj[2] = {};
-            int x = 0;
-            for(int j = 0; j < 10; j++){
-                if(digits[j]!=0){
-                    afj[x++] = j;
-                }
-            }
-            ans[afj[0]][afj[1]]++;
-        }
-    }
-
-    //1,1 3,3
-    int digits[10] = {};
-    for(int i = 0; i < 3; i++){
-        digits[arr[i][i]]++;
-    }
-    int cnt = 0;
-    for(int i = 0; i < 10; i++){
-        if(digits[i]!=0){
-            cnt++;
-        }
-    }
-    if(cnt == 2){
-            int afj[2] = {};
-            int x = 0;
-            for(int j = 0; j < 10; j++){
-                if(digits[j]!=0){
-                    afj[x++] = j;
-                }
-            }
-            ans[afj[0]][afj[1]]++;
-        }
-    //1,3 3,1
-    int digits1[10] = {};
-    for(int i = 0; i < 3; i++){
-        digits1[arr[i][2-i]]++;
-    }
-    cnt = 0;
-    for(int i = 0; i < 10; i++){
-        if(digits1[i]!=0){
-            cnt++;
-        }
-    }
-   if(cnt == 2){
-            int afj[2] = {};
-            int x = 0;
-            for(int j = 0; j < 10; j++){
-                if(digits[j]!=0){
-                    afj[x++] = j;
-                }
-            }
-            ans[afj[0]][afj[1]]++;
-        }
-
-    int ans_cnt = 0;
+    
 
     for(int i = 0; i < 10; i++){
+        for(int j = i+1; j < 10; j++){
+            for(int q= 0; q < 3;q++){
+                int cntA =0;
+                int cntB = 0;
+                for(int w = 0; w < 3; w++){
+                    if(bingo[q][w]==i){
+                        cntA++;
+                    }else if(bingo[q][w]==j){
+                        cntB++;
+                    }
+                }
+                if(cntA + cntB == 3 && cntA<3){
+                    teams[i][j]=true;
+                }
+            }
+        }
+    }
+
+    for(int i = 0; i < 10; i++){
+        for(int j = i+1; j < 10; j++){
+            for(int q= 0; q < 3;q++){
+                int cntA =0;
+                int cntB = 0;
+                for(int w = 0; w < 3; w++){
+                    if(bingo[w][q]==i){
+                        cntA++;
+                    }else if(bingo[w][q]==j){
+                        cntB++;
+                    }
+                }
+                if(cntA + cntB == 3 && cntA<3){
+                    //cout << 'a' << endl;
+                    teams[i][j]=true;
+                }
+            }
+        }
+    }
+
+    for(int i = 0; i < 10; i++){
+        for(int j = i+1; j < 10; j++){
+                int cntA =0;
+                int cntB = 0;
+                for(int w = 0; w < 3; w++){
+                    if(bingo[w][w]==i){
+                        cntA++;
+                    }else if(bingo[w][w]==j){
+                        cntB++;
+                    }
+                }
+                if(cntA + cntB == 3 && cntA<3){
+                    //cout << 'a' << endl;
+                    teams[i][j]=true;
+                }
+        }
+    }
+    for(int i = 0; i < 10; i++){
+        for(int j = i+1; j < 10; j++){
+                int cntA = 0;
+                int cntB = 0;
+                for(int w = 0; w < 3; w++){
+                    if(bingo[w][2-w]==i){
+                        cntA++;
+                    }else if(bingo[w][2-w]==j){
+                        cntB++;
+                    }
+                }
+                if(cntA + cntB == 3 && cntA<3){
+                    //cout << 'a' << endl;
+                    teams[i][j]=true;
+                }
+        }
+    }
+    for(int i = 0; i < 10 ;i++){
         for(int j = 0; j < 10; j++){
-            if(ans[i][j]!=0){
+            if(teams[i][j]==true){
                 ans_cnt++;
+                //cout << i << " " << j << endl;
             }
         }
     }
     cout << ans_cnt;
-    return 0;
 }
