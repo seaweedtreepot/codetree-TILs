@@ -18,7 +18,7 @@ int main() {
     }
     
 
-    for(int i = 0; i < 10; i++){
+    for(int i = 1; i < 10; i++){
         for(int j = i+1; j < 10; j++){
             for(int q= 0; q < 3;q++){
                 int cntA =0;
@@ -37,7 +37,7 @@ int main() {
         }
     }
 
-    for(int i = 0; i < 10; i++){
+    for(int i = 1; i < 10; i++){
         for(int j = i+1; j < 10; j++){
             for(int q= 0; q < 3;q++){
                 int cntA =0;
@@ -57,7 +57,7 @@ int main() {
         }
     }
 
-    for(int i = 0; i < 10; i++){
+    for(int i = 1; i < 10; i++){
         for(int j = i+1; j < 10; j++){
                 int cntA =0;
                 int cntB = 0;
@@ -74,7 +74,7 @@ int main() {
                 }
         }
     }
-    for(int i = 0; i < 10; i++){
+    for(int i = 1; i < 10; i++){
         for(int j = i+1; j < 10; j++){
                 int cntA = 0;
                 int cntB = 0;
