@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
     int arr[3][3];
-    int ans = 0;
+    int ans[10][10] = {};
     string input;
     for(int i = 0; i < 3; i++){
         cin >> input;
@@ -21,13 +21,19 @@ int main() {
         }
         int cnt = 0;
         for(int j = 0; j < 10; j++){
-            //cout << digits[j] << " ";
             if(digits[j]!=0){
                 cnt++;
             }
         }
         if(cnt == 2){
-            ans++;
+            int afj[2] = {};
+            int x = 0;
+            for(int j = 0; j < 10; j++){
+                if(digits[j]!=0){
+                    afj[x++] = j;
+                }
+            }
+            ans[afj[0]][afj[1]]++;
         }
     }
 
@@ -38,13 +44,19 @@ int main() {
         }
         int cnt = 0;
         for(int j = 0; j < 10; j++){
-            //cout << digits[j] << " ";
             if(digits[j]!=0){
                 cnt++;
             }
         }
         if(cnt == 2){
-            ans++;
+            int afj[2] = {};
+            int x = 0;
+            for(int j = 0; j < 10; j++){
+                if(digits[j]!=0){
+                    afj[x++] = j;
+                }
+            }
+            ans[afj[0]][afj[1]]++;
         }
     }
 
@@ -60,8 +72,15 @@ int main() {
         }
     }
     if(cnt == 2){
-        ans ++;
-    }
+            int afj[2] = {};
+            int x = 0;
+            for(int j = 0; j < 10; j++){
+                if(digits[j]!=0){
+                    afj[x++] = j;
+                }
+            }
+            ans[afj[0]][afj[1]]++;
+        }
     //1,3 3,1
     int digits1[10] = {};
     for(int i = 0; i < 3; i++){
@@ -73,10 +92,26 @@ int main() {
             cnt++;
         }
     }
-    if(cnt == 2){
-        ans ++;
-    }
+   if(cnt == 2){
+            int afj[2] = {};
+            int x = 0;
+            for(int j = 0; j < 10; j++){
+                if(digits[j]!=0){
+                    afj[x++] = j;
+                }
+            }
+            ans[afj[0]][afj[1]]++;
+        }
 
-    cout << ans;
+    int ans_cnt = 0;
+
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
+            if(ans[i][j]!=0){
+                ans_cnt++;
+            }
+        }
+    }
+    cout << ans_cnt;
     return 0;
 }
