@@ -3,7 +3,7 @@
 #include <tuple>
 using namespace std;
 
-int dotCount(int a, int b,pair<int,int> dts[],int n){
+int dotCount(int b, int a,pair<int,int> dts[],int n){
     int cnt = 0;
     if(a){//세로
         for(int i = 0; i < n;i++){
@@ -49,7 +49,10 @@ int main() {
         for(int j = 0; j < n;j++){
             for(int k = 0; k < n; k++){
                 for(int q = 0; q < n; q++){
+                    if(j == k || k == q || q == j) continue;
+
                     int cnt = 0;
+                    
                     cnt += dotCount(j,a,dots,n);
                     cnt += dotCount(k,b,dots,n);
                     cnt += dotCount(q,c,dots,n);
