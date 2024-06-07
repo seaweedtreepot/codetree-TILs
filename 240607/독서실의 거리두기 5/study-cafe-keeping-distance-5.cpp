@@ -23,21 +23,21 @@ int main() {
         int cnt = 0;
         int min = 100;
 
-        for(int j = 0; j < n; j++){
+        for(int j = 1; j < n; j++){
             if(copy[j]==0){
                 cnt++;
             }else{
-                if(min > cnt && cnt!=0){
+                if(min > cnt ){
                     min = cnt;
                     //cout << min << endl;
                 }
                 cnt = 0;
             }
         }
-        //cout << min << endl;
+        //cout << min << " ";
         carr[key++] = min;
     }
-    
+    //cout << endl;
     int ans=0;
     for(int i = 0; i < n; i++){
         //cout << carr[i] << " ";
@@ -46,6 +46,6 @@ int main() {
         }
     }
 
-    cout << ans;
+    cout << ans+1;
     return 0;
 }
