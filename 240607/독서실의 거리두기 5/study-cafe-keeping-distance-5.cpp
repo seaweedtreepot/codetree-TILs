@@ -2,50 +2,55 @@
 #include <string>
 using namespace std;
 int main() {
-    // 여기에 코드를 작성해주세요.
     int n;
     string str;
-    int carr[20]={};
-    //int arr[20];
+    int marr[20]={};
     cin >> n >> str;
-    int key = 0;
-    
-    for(int i = 0; i < n; i++){
-        if(str[i]-48==1) continue;
 
-        int copy[20];
-        for(int i = 0; i < n; i++){
-            copy[i] = str[i]-48;
+
+    for(int i = 0; i < n; i++){
+        if(str[i]=='1') {
+            //cout << "skip" << endl;
+            continue;
         }
-        copy[i] = 1;
+        int arr[20];
+        int min = 20;
+        for(int j = 0; j < n; j++){
+            arr[j] = str[j]-48;
+        }
+        arr[i] = 1;
+
+        for(int q = 0; q < n; q++){
+            //cout << arr[q] << " ";
+        }
+        //cout << endl;
 
 
         int cnt = 0;
-        int min = 100;
-
-        for(int j = 1; j < n; j++){
-            if(copy[j]==0){
-                cnt++;
-            }else{
-                if(min > cnt ){
-                    min = cnt;
-                    //cout << min << endl;
+        for(int j = 0; j < n-1; j++){
+            if(arr[j]==1){
+                for(int k = j+1; k < n; k++){
+                    if(arr[k]==1){
+                        cnt = k-j;
+                        if(min > cnt){
+                            min = cnt;
+                        }
+                    }
                 }
-                cnt = 0;
             }
         }
-        //cout << min << " ";
-        carr[key++] = min;
-    }
-    //cout << endl;
-    int ans=0;
-    for(int i = 0; i < n; i++){
-        //cout << carr[i] << " ";
-        if(ans < carr[i]){
-            ans = carr[i];
-        }
+        marr[i] = min;
     }
 
-    cout << ans+1;
+    int ans = 0;
+    for(int i = 0; i < n; i++){
+        //cout << marr[i] << " ";
+        if(ans < marr[i]){
+            ans = marr[i];
+        }
+    }
+    //cout << endl;
+    cout << ans;
+    // 여기에 코드를 작성해주세요.
     return 0;
 }
