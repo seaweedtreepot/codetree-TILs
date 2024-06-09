@@ -11,21 +11,21 @@ int main() {
         cond[i] = make_pair(i1,i2);
     }
 
-    int start  = cond[0].first;
-    int last = cond[0].second;
-    for(int i = start; i <= last; i++){
+    int i = 1;
+    while(1){
         int x = i*2;
         for(int j = 0; j < n; j++){
             if(x>=cond[j].first && x<= cond[j].second){
                 if(j==n-1){
-                    cout << i ;
+                    cout << i <<endl;
                     return 0;
                 }
-                x *= 2;
+                x *=2;
             }else{
                 continue;
             }
         }
+        i++;
     }
 
     return 0;
