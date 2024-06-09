@@ -11,23 +11,35 @@ int main() {
         cin >> arr[i];
     }
     sort(arr,arr+n);
-    int min = arr[0];
-    int max = arr[0]+k;
-    for(int j = 0; j < n; j++){
+
+
+    for(int i = 0; i < n; i++){
+        //cout << arr[i] << " ";
+    }
+    //cout << endl;
+
+
+    int min = 1;
+    int max = 1+k;
+    for(int j = 0; j < arr[n-1]-k; j++){
         int cnt = 0;
+        //cout << "max : " << max << "||" << " ";
     for(int i = 0; i < n; i++){
         if(arr[i]>=min && arr[i]<=max){
             cnt++;
+            //cout << arr[i] << " ";
         }else{
-            break;
+            continue;
         }
     }
         if(cnt > cnt_max){
             cnt_max = cnt;
         }
-        min ++;
-        max ++;
+        //cout << endl;
+        min++;
+        max++;
     }
+    //cout << endl;
     cout << cnt_max;
     return 0;
 }
