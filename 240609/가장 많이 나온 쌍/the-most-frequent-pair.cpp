@@ -7,7 +7,7 @@ int main() {
     int n;
     pair<int,int> ssang[100];
     int m;
-    int max = 0;
+    int max = 1;
     cin >> n >> m;
     int i1,i2;
     for(int i = 0;i < m; i++){
