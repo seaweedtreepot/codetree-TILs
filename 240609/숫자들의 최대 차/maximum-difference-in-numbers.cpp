@@ -21,6 +21,10 @@ int main() {
 
     int min = 1;
     int max = 1+k;
+    if(arr[n-1]-k <= 0){
+        cout << n;
+        return 0;
+    }
     for(int j = 0; j < arr[n-1]-k; j++){
         int cnt = 0;
         //cout << "max : " << max << "||" << " ";
