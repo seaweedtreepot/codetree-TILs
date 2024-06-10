@@ -8,7 +8,7 @@ int main() {
     for(int i = 0; i < n; i++)
         cin >> arr[i];
     int cur = 0;
-
+    ans_min = arr[0];
 
 
     for(int i = 0; i < n; i++){//
