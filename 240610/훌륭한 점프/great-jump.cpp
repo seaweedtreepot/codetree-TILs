@@ -25,5 +25,6 @@ int main() {
         cur = jump;
         //cout << cur << endl;
     }
+    cout << ans;
     return 0;
 }
