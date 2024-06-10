@@ -4,16 +4,12 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int n;
     int arr[1000];
-
-
     cin >> n;
-    int asd = n;
     for(int i = 0; i < n-1; i++){
         cin >> arr[i];
     }
 
     int ans_arr[1000];
-
     for(int j = 1; j < 10; j++){
         bool checking[1001] = {};
         bool flag = true;
@@ -27,6 +23,11 @@ int main() {
         }
         //cout << endl;
         for(int i = 1; i <= n; i++){
+            if(ans_arr[i]>=1 && ans_arr[i]<=n){
+                
+            }else{
+                break;
+            }
             checking[ans_arr[i]] = true;
         }
 
@@ -36,7 +37,7 @@ int main() {
             }
         }
         if(flag){
-            for(int q = 0; q < asd; q++){
+            for(int q = 0; q < n; q++){
                 cout << ans_arr[q] << " ";
             }
             return 0;
