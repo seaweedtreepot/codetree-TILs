@@ -13,10 +13,7 @@ int main() {
         int min = 101;
         int jump;
         for(int j = cur+1; j <= k+cur;j++){
-            if(j == n-1){
-                cout << (ans>arr[n-1]? ans : arr[n-1]);
-                return 0;
-            }
+            
             if(arr[j]<min){
                 jump = j;
                 min = arr[j];
