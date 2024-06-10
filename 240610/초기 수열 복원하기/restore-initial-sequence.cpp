@@ -4,7 +4,10 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int n;
     int arr[1000];
+
+
     cin >> n;
+    int asd = n;
     for(int i = 0; i < n-1; i++){
         cin >> arr[i];
     }
@@ -22,29 +25,22 @@ int main() {
                ans_arr[i] = arr[i-1] - ans_arr[i-1];
             }
         }
-        for(int i = 0; i < n; i++){
-            checking[ans_arr[i]] = true;
-            //cout << ans_arr[i] << " ";
-        }
         //cout << endl;
         for(int i = 1; i <= n; i++){
             checking[ans_arr[i]] = true;
         }
+
         for(int i = 1; i<=n;i++){
             if(checking[i]!=true){
                 flag =false;
             }
         }
-
         if(flag){
-            for(int q = 0; q < n; q++){
+            for(int q = 0; q < asd; q++){
                 cout << ans_arr[q] << " ";
             }
             return 0;
         }
-        
     }
-
-    
     return 0;
 }
