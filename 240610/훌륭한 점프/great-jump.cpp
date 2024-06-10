@@ -36,6 +36,6 @@ int main() {
         }
     }
 
-
+    cout << ans_min;
     return 0;
 }
