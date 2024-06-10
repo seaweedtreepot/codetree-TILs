@@ -10,7 +10,7 @@ int main() {
     }
 
     int ans_arr[1000];
-    for(int j = 1; j < 10; j++){
+    for(int j = 1; j <= n; j++){
         bool checking[1001] = {};
         bool flag = true;
         for(int i = 0; i < n; i++){
