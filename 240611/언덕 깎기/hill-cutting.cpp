@@ -1,25 +1,33 @@
 #include <iostream>
 #include <algorithm>
+#include <climits>
 using namespace std;
 int main() {
-    // 여기에 코드를 작성해주세요.
+    // 아이디어 : [0+i , 17 + i) 의 구간으로 해서 맞춰 끼워넣기.
     int n;
     cin >> n;
     int arr[1000];
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < n; i++){ 
         cin >> arr[i];
     }
-
-    sort(arr,arr+n);
-    int price = 0;
-    for(int i = 0; i < n/2+1; i++){
-        if(abs(arr[i]-arr[n-i-1])>17){
-            int a = (abs(arr[i]-arr[n-i-1])-17)/2;
-            int b = (abs(arr[i]-arr[n-i-1])-17) - a;
-            price += a * a + b* b;
+    
+    int min = INT_MAX;
+    for(int i = 0; i < 94; i++){
+        int price = 0;
+        for(int j = 0; j < n; j++){
+            if(i > arr[j]){
+                int a = abs(arr[j]-i);
+                price += a * a;
+            }else if(arr[j]> i+17){
+                int a = abs(arr[j]-(i+17));
+                price += a * a;
+            }
+        }
+        if(min > price){
+            min = price;
         }
     }
-    cout << price ;
-    //1 4 20 21 24
+
+    cout << min;
     return 0;
 }
