@@ -31,7 +31,7 @@ int main() {
                 mcnt++;
             }
         }
-        if(mcnt <= m-1  && pos && max == i){
+        if(mcnt <= m-1  && pos ){
             cout << i ;
             return 0;
         }
