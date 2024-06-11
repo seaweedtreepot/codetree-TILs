@@ -11,7 +11,7 @@ int main() {
     int ans = INT_MAX;
 
 
-    for(int i = 1; i < 100; i++){//구간당 최대값
+    for(int i = 1; i < 10000; i++){//구간당 최대값
         int max=  0;
         int mcnt = 0;
         for(int j = 0; j < n; j++){
