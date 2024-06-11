@@ -12,25 +12,25 @@ int main() {
 
 
     for(int i = 1; i < 10000; i++){//구간당 최대값
-        int max=  0;
+        int sum = 0;
+        int max = 0;
         int mcnt = 0;
         for(int j = 0; j < n; j++){
-            max += arr[j];
-            if(max > i){
-                max = arr[j];
+            sum += arr[j];
+            if(sum > i){
+                sum -= arr[j];
+                if(sum > max){
+                    max = sum;
+                    //cout << sum << endl;    
+                }
+                sum = arr[j];
                 mcnt++;
-                //cout << i << " : " << max << " : " << mcnt<<" : "<< j << endl;
-                
-            }
-            if(mcnt>m-1){
-                break;
             }
         }
-        if(mcnt == m-1){
-            cout << i<<endl;
+        if(mcnt <= m-1 && max == i){
+            cout << i ;
             return 0;
         }
-
     }
     return 0;
 }
