@@ -16,15 +16,18 @@ int main() {
 
     for(int i = 0; i < 100; i++){
         for(int j = 0; j < n; j++){
-            if(dots[i].first <= i && i<=dots[i].second){
+            //cout << j << endl;
+            if(dots[j].first <= i && i<=dots[j].second){
                 flag =true;
             }else{
+                //cout << "포함 안됨 " << endl;
                 flag =false;
                 break;
             }
         }
         if(flag){
             cout << "Yes";
+            //cout << i << endl;
             return 0;
         }
     }
