@@ -20,7 +20,6 @@ int main() {
 
    
     if(log[p].second == 0){
-        cout << "stop";
         return 0;
     }
 
