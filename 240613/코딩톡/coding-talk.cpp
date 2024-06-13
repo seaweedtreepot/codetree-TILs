@@ -23,8 +23,9 @@ int main() {
         return 0;
     }
 
-    for(int i = p; i < n; i++){
+    for(int i = p; i < m; i++){
         alphabet[log[i].first] = true;
+        //cout << i << endl;
     }
     for(int i = p ; i >= 0; i--){
         if(log[p].second == log[i].second){
