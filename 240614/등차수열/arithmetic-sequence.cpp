@@ -6,12 +6,15 @@ int main() {
     cin >> n;
     int a;
     int arr[101]={};
+    bool ar[101] = {};
     for(int i = 0; i < n; i++){
        cin >> arr[i];
+       ar[arr[i]] = true;
        
     }
     int max= 0;
     for(int k = 1; k <= 100; k++){
+        if(ar[k]) continue;
         int cnt= 0;
         for(int i = 0; i<n; i++){
             for(int j = i; j < n; j++){
@@ -23,6 +26,7 @@ int main() {
         }
         if(max< cnt){
             max = cnt;
+            //cout <<k << ": "<< cnt << endl;
         }
     }
 
