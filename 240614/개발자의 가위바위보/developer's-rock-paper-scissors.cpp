@@ -14,10 +14,10 @@ int main() {
         asd[i] = make_pair(t1,t2);
     }
     int max = 0;
-    for(int i = 0; i < 3; i++){
-        int si = (1+i)%4;
-        int rock = (2+i)%4;
-        int paper = (3+i)%4;
+    
+        int si = 1;
+        int rock = 2;
+        int paper = 3;
         int cnt = 0;
         for(int i = 0; i < n; i++){//1 2 3 가위바위보
             if(asd[i].first ==rock && asd[i].second == si){
@@ -31,7 +31,83 @@ int main() {
         if(max < cnt){
             max = cnt;
         }
-    }
+     si = 1;
+         rock = 3;
+         paper = 2;
+         cnt = 0;
+        for(int i = 0; i < n; i++){//1 2 3 가위바위보 2
+            if(asd[i].first ==rock && asd[i].second == si){
+                cnt ++;
+            }else if(asd[i].first ==si && asd[i].second == paper){
+                cnt++;
+            }else if(asd[i].first ==paper && asd[i].second == rock){
+                cnt++;
+            }
+        }
+        if(max < cnt){
+            max = cnt;
+        } si = 2;
+         rock = 1;
+         paper = 3;
+         cnt = 0;
+        for(int i = 0; i < n; i++){//1 2 3 가위바위보 3
+            if(asd[i].first ==rock && asd[i].second == si){
+                cnt ++;
+            }else if(asd[i].first ==si && asd[i].second == paper){
+                cnt++;
+            }else if(asd[i].first ==paper && asd[i].second == rock){
+                cnt++;
+            }
+        }
+        if(max < cnt){
+            max = cnt;
+        } si = 2;
+         rock = 3;
+         paper = 1;
+         cnt = 0;
+        for(int i = 0; i < n; i++){//1 2 3 가위바위보 4
+            if(asd[i].first ==rock && asd[i].second == si){
+                cnt ++;
+            }else if(asd[i].first ==si && asd[i].second == paper){
+                cnt++;
+            }else if(asd[i].first ==paper && asd[i].second == rock){
+                cnt++;
+            }
+        }
+        if(max < cnt){
+            max = cnt;
+        } si = 3;
+         rock = 1;
+         paper = 2;
+         cnt = 0;
+        for(int i = 0; i < n; i++){//1 2 3 가위바위보 5
+            if(asd[i].first ==rock && asd[i].second == si){
+                cnt ++;
+            }else if(asd[i].first ==si && asd[i].second == paper){
+                cnt++;
+            }else if(asd[i].first ==paper && asd[i].second == rock){
+                cnt++;
+            }
+        }
+        if(max < cnt){
+            max = cnt;
+        } si = 3;
+         rock = 2;
+         paper = 1;
+         cnt = 0;
+        for(int i = 0; i < n; i++){//1 2 3 가위바위보 6
+            if(asd[i].first ==rock && asd[i].second == si){
+                cnt ++;
+            }else if(asd[i].first ==si && asd[i].second == paper){
+                cnt++;
+            }else if(asd[i].first ==paper && asd[i].second == rock){
+                cnt++;
+            }
+        }
+        if(max < cnt){
+            max = cnt;
+        }
+        
 
     cout << max ;
     return 0;
