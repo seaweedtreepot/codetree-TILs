@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
@@ -12,12 +13,17 @@ int main() {
        ar[arr[i]] = true;
        
     }
+    sort(arr,arr+n);
+
+    for(int i = 0; i < n; i++){
+        //cout << arr[i] << " ";
+    }
+    //cout << endl;
     int max= 0;
-    for(int k = 1; k <= 100; k++){
-        if(ar[k]) continue;
+    for(int k = 01; k <= 100; k++){
         int cnt= 0;
         for(int i = 0; i<n; i++){
-            for(int j = i; j < n; j++){
+            for(int j = i+1; j < n; j++){
                 if(k-arr[j] == arr[i]-k){
                     cnt++;
                     //cout << k << endl;
