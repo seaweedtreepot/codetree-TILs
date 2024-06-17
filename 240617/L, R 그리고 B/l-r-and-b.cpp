@@ -31,9 +31,17 @@ int main() {
     }
     int cur = -1;
     if(Riidx == Liidx && Riidx == Biidx ){
-        cur +=2;
+        if(Rjidx <= Ljidx && Rjidx>=Bjidx){
+            cur+=2;
+        }else if(Rjidx >= Ljidx && Rjidx<=Bjidx){
+            cur+=2;
+        }
     }else if(Rjidx == Ljidx && Rjidx == Bjidx){
-        cur += 2;
+        if(Riidx <= Liidx && Riidx>=Biidx){
+            cur+=2;
+        }else if(Riidx >= Liidx && Riidx<=Biidx){
+            cur+=2;
+        }
     }
     int ans = abs(Liidx - Biidx) + abs(Ljidx - Bjidx) +cur;
     cout << ans;
