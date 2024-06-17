@@ -14,7 +14,6 @@ int main() {
     sort(arr,arr+n);
 
     
-    cout<<endl;
     int m = arr[0] * arr[1] * arr[n-1];
     int p = arr[n-1] * arr[n-2] * arr[n-3];
     int MAX = max(m,p);
