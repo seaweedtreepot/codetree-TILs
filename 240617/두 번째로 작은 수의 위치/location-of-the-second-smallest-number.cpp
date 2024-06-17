@@ -34,7 +34,7 @@ int main() {
     }
     else{
         for(int i = 0; i <n; i++){
-            if(arr[i]==max){
+            if(tarr[i]==max){
                 cout << i+1;
             }
         }
