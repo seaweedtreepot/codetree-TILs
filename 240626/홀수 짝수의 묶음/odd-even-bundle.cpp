@@ -17,11 +17,12 @@ int main() {
     int i = 0;
     while(1){
         if(i%2==0){
-            if(even!=0){
-                even-=1;
+            if(even != 0){
+                even--;
             }else if(odd!=0){
                 if(odd==1){
                     i--;
+                    cout << i << endl;
                     break;
                 }
                 odd-=2;
@@ -34,10 +35,12 @@ int main() {
                 odd--;
             }
             //cout << i << endl;
-        }  
+        }
+        if(odd==0 && even==0)
+            break; 
         i++;  
     }
 
-    cout << i;
+    cout << i+1;
     return 0;
 }
