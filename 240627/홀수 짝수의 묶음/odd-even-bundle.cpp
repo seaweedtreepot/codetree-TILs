@@ -17,42 +17,29 @@ int main() {
     int i = 0;
     while(1){
         if(i%2==0){
-            //cout << "짝"<< " ";
-        }else{
-            //cout << "홀" << " ";
-        }
-        //cout << odd << " " << even << endl;
-
-        if(i%2==0){
             if(even!=0){
                 even--;
+                i++;
             }else if(odd!=0){
-
                 if(odd==1){
-                    //cout << "발동" << endl;
-                    //cout << i << endl;
-                    i-=2;
-                    //cout << i << endl;
+                    i--;
                     break;
                 }else{
                     odd-=2;
+                    i++;
                 }
             }
         }else if(i%2==1){
             if(odd!=0){
                 odd--;
+                i++;
             }else{
-                //cout << "q" <<endl;
-                i--;
                 break;
             }
         }
-        if(odd==0 && even==0)
-            break; 
-        i++;  
         //cout << i << endl;
     }
 
-    cout << i+1;
+    cout << i;
     return 0;
 }
