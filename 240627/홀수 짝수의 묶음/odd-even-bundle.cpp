@@ -6,7 +6,7 @@ int main() {
     cin >> n;
     int odd,even=0;
 
-    int arr[100];
+    int arr[1000];
     for(int i = 0; i < n; i++){
         cin >> arr[i];
         if(arr[i]%2==0){
