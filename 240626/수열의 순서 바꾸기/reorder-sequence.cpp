@@ -13,7 +13,7 @@ int main() {
 
     for(int i = 0; i < n; i++){
         bool flag = false;
-        for(int j = i; j < n; j++){
+        for(int j = i; j < n-1; j++){
             if(arr[j]>arr[j+1]){
                 flag = true;
                 break;
