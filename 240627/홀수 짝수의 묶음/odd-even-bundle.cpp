@@ -28,6 +28,8 @@ int main() {
                     odd-=2;
                     i++;
                 }
+            }else{
+                break;
             }
         }else if(i%2==1){
             if(odd!=0){
@@ -37,9 +39,6 @@ int main() {
                 break;
             }
         }
-        if(odd==0 && even==0)
-            break; 
-        //cout << i << endl;
     }
 
     cout << i;
