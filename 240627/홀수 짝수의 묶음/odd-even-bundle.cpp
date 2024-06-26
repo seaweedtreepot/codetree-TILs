@@ -37,6 +37,8 @@ int main() {
                 break;
             }
         }
+        if(odd==0 && even==0)
+            break; 
         //cout << i << endl;
     }
 
