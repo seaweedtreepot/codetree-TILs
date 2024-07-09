@@ -30,7 +30,9 @@ int main() {
                 it++;
             }
         }else if(a=='D'){
-            l.erase(it);
+            if(it!=l.end()){
+                l.erase(it);
+            }
         }
     }
 
