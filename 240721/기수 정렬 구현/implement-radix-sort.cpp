@@ -10,7 +10,7 @@ int fun(int n,int a){
     }
     return ans;
 }
-int main() {
+int main() {//해설의 17,19행을 참고하면 더 좋음
     // 여기에 코드를 작성해주세요.
     int n;
     cin >> n;
