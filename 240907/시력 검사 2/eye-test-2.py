@@ -5,4 +5,4 @@ if n>=1.0:
 elif n>=0.5:
     print("Middle")
 else:
-    print("low")
+    print("Low")
