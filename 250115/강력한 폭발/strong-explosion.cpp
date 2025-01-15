@@ -9,8 +9,18 @@ int bomb_gird[20][20];
 
 void bomb_put(int type, int num1, int num2){
     if(type == 1){
-        for(int i = 0; i < n; i++){
-            bomb_gird[i][num2]++;
+        bomb_gird[num1][num2]++;
+        if(num1 > 0){
+            bomb_gird[num1-1][num2]++;
+        }
+        if(num1 > 1){
+            bomb_gird[num1-2][num2]++;
+        }
+        if(num1 < n-1){
+            bomb_gird[num1+1][num2]++;
+        }
+        if(num1 < n-2){
+            bomb_gird[num1+2][num2]++;
         }
     }else if (type ==2){
         bomb_gird[num1][num2]++;
@@ -44,8 +54,18 @@ void bomb_put(int type, int num1, int num2){
 }
 void bomb_pop(int type,int num1, int num2){
     if(type == 1){
-        for(int i = 0; i < n; i++){
-            bomb_gird[i][num2]--;
+        bomb_gird[num1][num2]--;
+        if(num1 > 0){
+            bomb_gird[num1-1][num2]--;
+        }
+        if(num1 > 1){
+            bomb_gird[num1-2][num2]--;
+        }
+        if(num1 < n-1){
+            bomb_gird[num1+1][num2]--;
+        }
+        if(num1 < n-2){
+            bomb_gird[num1+2][num2]--;
         }
     }else if (type ==2){
         bomb_gird[num1][num2]--;
@@ -135,3 +155,4 @@ int main() {
     cout << large;
     return 0;
 }
+
