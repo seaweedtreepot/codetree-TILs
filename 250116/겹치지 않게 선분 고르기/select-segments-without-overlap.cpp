@@ -26,28 +26,26 @@ bool flag(){
     }
     return true;
 }
-void checker(int num, int cnt,bool one){
+void checker(int num, int cnt){
     if(num==n){
+        //cout << cnt << endl;
         if(flag()){
-            if(largest < cnt)
+            //cout << "통과" << endl;
+            if(largest < cnt){
                 largest = cnt;
+            }
             return;
         }
         else{
             return;
         }
     }
-    if(one){
-        draw(num);
-    }
-    for(int i = 0; i < n; i++){
-        checker(num+1, cnt+1,true); //num번째 직선 추가 and 비추가
-        checker(num+1,cnt,false);
-    }
-    if(one){
-        erase(num);
-    }
+    draw(num);
+    checker(num+1, cnt+1); //num번째 직선 추가 and 비추가
+    erase(num);
+    checker(num+1,cnt);
 }
+
 int main() {
     for(int i = 0; i < 1001;i++){
         grid[i] = 0;
@@ -58,8 +56,8 @@ int main() {
         cin >> x1[i] >> x2[i];
     }
     
-    checker(0,0,true);
-    checker(0,0,false);
+    checker(0,0);
     cout << largest;
     return 0;
 }
+
